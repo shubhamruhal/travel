@@ -7,7 +7,6 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaClock,
-  FaPaperPlane,
 } from 'react-icons/fa';
 
 export default function ContactUs() {

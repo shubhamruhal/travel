@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FaHotel, FaCar, FaShip, FaPlane, FaStar, FaPlusCircle } from "react-icons/fa";
+import type { ReactElement } from "react";
 
 type TravelPackage = {
   id: number;
@@ -20,7 +21,7 @@ type PackageCardProps = {
 export default function PackageCard({ data }: PackageCardProps) {
   const { title, region, duration, image, price, rating, services, note } = data;
 
-  const serviceIcons: Record<string, JSX.Element> = {
+  const serviceIcons: Record<string, ReactElement> = {
     Hotel: <FaHotel className="text-xl" />,
     Car: <FaCar className="text-xl" />,
     Cruises: <FaShip className="text-xl" />,

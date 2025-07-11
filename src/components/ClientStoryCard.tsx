@@ -1,8 +1,17 @@
 import React from "react";
-import { FaPlayCircle } from "react-icons/fa";
 import Image from "next/image";
 
-export default function ClientStoryCard({ videoUrl, username, thumbnailUrl, logoUrl }) {
+export type ClientStoryCardProps = {
+  videoUrl: string;
+  username: string;
+  logoUrl: string;
+};
+
+export default function ClientStoryCard({
+  videoUrl,
+  username,
+  logoUrl,
+}: ClientStoryCardProps) {
   return (
     <div className="relative w-80 h-[500px] bg-neutral-900 rounded-3xl overflow-hidden flex flex-col justify-between p-6 text-white shadow-xl transition-transform duration-300 hover:scale-105">
       

@@ -13,43 +13,43 @@ type TravelPackage = {
   note: string;
 };
 
-export const travelPackages: TravelPackage[] = [
-  {
-    id: 1,
-    title: "Majestic Maldives",
-    region: "Asia",
-    duration: "5 Days/ 6 Nights",
-    image: "/images/australia.jpg",
-    price: "₹1,05,450",
-    rating: 5,
-    services: ["Hotel", "Car", "Cruises", "Flights"],
-    note: "This price is lower than the average price in April",
-  },
-  {
-    id: 2,
-    title: "Bali Bliss Retreat",
-    region: "Asia",
-    duration: "4 Days/ 5 Nights",
-    image: "/images/egypt.jpg",
-    price: "₹89,990",
-    rating: 4,
-    services: ["Hotel", "Flights", "Cruises"],
-    note: "Includes cultural experiences and beach stays",
-  },
-  {
-    id: 3,
-    title: "European Explorer",
-    region: "Europe",
-    duration: "10 Days/ 9 Nights",
-    image: "/images/london.jpg",
-    price: "₹2,40,000",
-    rating: 5,
-    services: ["Hotel", "Car", "Flights"],
-    note: "Multi-city tour across France, Italy, and Switzerland",
-  },
-];
-
 export default function Package() {
+  const travelPackages: TravelPackage[] = [
+    {
+      id: 1,
+      title: "Majestic Maldives",
+      region: "Asia",
+      duration: "5 Days/ 6 Nights",
+      image: "/images/australia.jpg",
+      price: "₹1,05,450",
+      rating: 5,
+      services: ["Hotel", "Car", "Cruises", "Flights"],
+      note: "This price is lower than the average price in April",
+    },
+    {
+      id: 2,
+      title: "Bali Bliss Retreat",
+      region: "Asia",
+      duration: "4 Days/ 5 Nights",
+      image: "/images/egypt.jpg",
+      price: "₹89,990",
+      rating: 4,
+      services: ["Hotel", "Flights", "Cruises"],
+      note: "Includes cultural experiences and beach stays",
+    },
+    {
+      id: 3,
+      title: "European Explorer",
+      region: "Europe",
+      duration: "10 Days/ 9 Nights",
+      image: "/images/london.jpg",
+      price: "₹2,40,000",
+      rating: 5,
+      services: ["Hotel", "Car", "Flights"],
+      note: "Multi-city tour across France, Italy, and Switzerland",
+    },
+  ];
+
   return (
     <>
       <section className="relative h-screen w-full">
@@ -80,4 +80,3 @@ export default function Package() {
     </>
   );
 }
-w
