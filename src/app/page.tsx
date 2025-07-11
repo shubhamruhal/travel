@@ -47,7 +47,7 @@ export default function MainPage() {
 				<title>Luxury Travel | Explore the World</title>
 				<meta
 					name="description"
-					content="Curated journeys to the world&apos;s most extraordinary destinations. Transform your travel dreams into unforgettable memories."
+					content="Curated journeys to the world's most extraordinary destinations. Transform your travel dreams into unforgettable memories."
 				/>
 			</Head>
 
@@ -98,7 +98,7 @@ export default function MainPage() {
 			</section>
 
 			{/* About Section */}
-			<section className="h-screen bg-[#fff4e8] py-20 px-6 lg:px-16 flex flex-col lg:flex-row items-center gap-12">
+			<section className="bg-[#fff4e8] py-20 px-6 lg:px-16 flex flex-col lg:flex-row items-center gap-12">
 				<div className="flex-1 flex justify-center">
 					<Image
 						src="/images/london.jpg"
@@ -151,7 +151,7 @@ export default function MainPage() {
 			</section>
 
 			{/* Trending Destinations Section */}
-			<section className="h-screen py-20 px-6 md:px-20 bg-white text-center">
+			<section className="py-20 px-6 md:px-20 bg-white text-center">
 				<span className="text-orange-500 bg-orange-100 rounded-full px-4 py-1 text-xl font-semibold">
 					TRENDING PACKAGES
 				</span>
@@ -166,7 +166,7 @@ export default function MainPage() {
 			</section>
 
 			{/* Testimonials Section */}
-			<section className="h-screen bg-[#fffaf5] py-16 px-6 text-center">
+			<section className="bg-[#fffaf5] py-20 px-6 text-center">
 				<h2 className="text-4xl font-bold mb-10">Our Clients Stories</h2>
 				<div className="flex flex-wrap justify-center gap-6">
 					{clientStories.map((story, index) => (
