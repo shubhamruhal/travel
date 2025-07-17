@@ -3,8 +3,6 @@
 import Image from 'next/image';
 import { Calendar, MapPin, Users, Edit2, Trash2 } from 'lucide-react';
 
-interface RecentPackagesProps {}
-
 interface Package {
   title: string;
   location: string;
@@ -25,7 +23,7 @@ const packages: Package[] = [
     days: 7,
     booked: 24,
     image: '/images/australia.jpg',
-    category: 'beach'
+    category: 'beach',
   },
   {
     title: 'Santorini Escape',
@@ -35,7 +33,7 @@ const packages: Package[] = [
     days: 8,
     booked: 18,
     image: '/images/egypt.jpg',
-    category: 'cultural'
+    category: 'cultural',
   },
   {
     title: 'Paris City Tour',
@@ -45,7 +43,7 @@ const packages: Package[] = [
     days: 5,
     booked: 12,
     image: '/images/london.jpg',
-    category: 'city'
+    category: 'city',
   },
   {
     title: 'Bali Beach Getaway',
@@ -55,21 +53,19 @@ const packages: Package[] = [
     days: 7,
     booked: 24,
     image: '/images/australia.jpg',
-    category: 'beach'
+    category: 'beach',
   },
 ];
 
-export default function RecentPackages({}: RecentPackagesProps) {
+export default function RecentPackages() {
   return (
     <div className="space-y-6">
-      {/* Packages Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {packages.map((pkg, idx) => (
-          <div 
-            key={idx} 
+          <div
+            key={idx}
             className="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
           >
-            {/* Image Container */}
             <div className="relative w-full h-48">
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent z-10 group-hover:from-black/70 transition-all duration-300" />
               <Image
@@ -78,24 +74,22 @@ export default function RecentPackages({}: RecentPackagesProps) {
                 fill
                 className="object-cover"
               />
-              {/* Status Badge */}
-              <span className={`absolute top-4 right-4 z-20 text-xs px-3 py-1.5 rounded-full font-medium ${
-                pkg.status === 'Active' 
-                  ? 'bg-green-500/90 text-white' 
-                  : 'bg-yellow-500/90 text-white'
-              }`}>
+              <span
+                className={`absolute top-4 right-4 z-20 text-xs px-3 py-1.5 rounded-full font-medium ${
+                  pkg.status === 'Active'
+                    ? 'bg-green-500/90 text-white'
+                    : 'bg-yellow-500/90 text-white'
+                }`}
+              >
                 {pkg.status}
               </span>
             </div>
 
-            {/* Content */}
             <div className="p-5">
-              {/* Package Title */}
               <h3 className="font-bold text-xl text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
                 {pkg.title}
               </h3>
-              
-              {/* Details */}
+
               <div className="space-y-3 mb-4">
                 <div className="flex items-center gap-2 text-gray-500">
                   <MapPin className="w-4 h-4" />
@@ -114,7 +108,6 @@ export default function RecentPackages({}: RecentPackagesProps) {
                 </div>
               </div>
 
-              {/* Action Buttons */}
               <div className="flex gap-2 pt-3 border-t border-gray-100">
                 <button className="flex-1 text-sm font-medium text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-sm hover:shadow-md">
                   <div className="flex items-center justify-center gap-2">

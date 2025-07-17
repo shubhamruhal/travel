@@ -12,7 +12,7 @@ export default function DashboardPage() {
       <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-2xl p-6 md:p-8 mb-6 shadow-lg">
         <div className="max-w-4xl">
           <h1 className="text-2xl md:text-3xl font-bold mb-2">Welcome back, Admin! 👋</h1>
-          <p className="text-blue-100">Here's what's happening with your travel business today.</p>
+          <p className="text-blue-100">Here&#39;s what&#39;s happening with your travel business today.</p>
         </div>
       </div>
 

@@ -32,7 +32,7 @@ const dummyDestinations = [
 ]
 
 export default function PopularDestinationsAdminPage() {
-  const [destinations, setDestinations] = useState(dummyDestinations)
+  const [destinations] = useState(dummyDestinations)
 
   const handleEdit = (id: number) => {
     console.log("Edit destination", id)

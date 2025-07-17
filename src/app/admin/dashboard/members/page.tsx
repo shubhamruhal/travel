@@ -32,7 +32,7 @@ const dummyTeam = [
 ]
 
 export default function TeamAdminPage() {
-  const [team, setTeam] = useState(dummyTeam)
+  const [team] = useState(dummyTeam)
 
   const handleEdit = (id: number) => {
     console.log("Edit member", id)

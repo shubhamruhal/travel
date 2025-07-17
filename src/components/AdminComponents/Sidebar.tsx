@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import {
   Home, Package, Book, Users, FileText, Settings,
-  MessageSquareText, MapPin, Mail, X, Menu,
+  MessageSquareText, MapPin, Mail, X,
   LogOut, User, ChevronLeft, ChevronRight, Plane
 } from 'lucide-react';
 

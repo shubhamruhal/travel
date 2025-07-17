@@ -26,7 +26,7 @@ const dummyStories = [
 ]
 
 export default function ClientStoriesPage() {
-  const [stories, setStories] = useState(dummyStories)
+  const [stories] = useState(dummyStories)
 
   const handleEdit = (name: string) => {
     console.log("Edit story:", name)

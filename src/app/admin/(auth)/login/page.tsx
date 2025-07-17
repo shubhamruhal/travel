@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 
 export default function AdminLoginPage() {
   const router = useRouter();
