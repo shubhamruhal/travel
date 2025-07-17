@@ -3,6 +3,28 @@
 import Link from "next/link"
 import { Phone, Mail, ChevronUp } from "lucide-react"
 
+// Dummy data arrays
+const quickLinks = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Packages", href: "/packages" },
+  { name: "Contact", href: "/contact" },
+  { name: "Admin", href: "/admin/login"}
+]
+
+const socialLinks = [
+  { name: "Instagram", href: "#" },
+  { name: "Twitter", href: "#" },
+  { name: "LinkedIn", href: "#" },
+  { name: "Facebook", href: "#" },
+]
+
+const contactInfo = {
+  address: `123 Dreamy Hills,\nSunset Boulevard,\nWanderland 54321`,
+  phone: "+123 456 7890",
+  email: "info@adventureaura.com",
+}
+
 export default function Footer() {
   return (
     <footer className="bg-slate-800 text-white relative">
@@ -25,37 +47,32 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <nav className="flex flex-col space-y-2">
-              <Link href="/" className="text-gray-300 hover:text-white transition-colors text-sm">
-                Home
-              </Link>
-              <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
-                About
-              </Link>
-              <Link href="/packages" className="text-gray-300 hover:text-white transition-colors text-sm">
-                Packages
-              </Link>
-              <Link href="/contact" className="text-gray-300 hover:text-white transition-colors text-sm">
-                Contact
-              </Link>
+              {quickLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-300 hover:text-white transition-colors text-sm"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </nav>
           </div>
 
-          {/* Contact */}
+          {/* Contact (using fake/mock data) */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Contact</h4>
             <div className="space-y-3">
-              <p className="text-gray-300 text-sm">
-                455 West Orchard Street Kings
-                <br />
-                Mountain, NC 280867
+              <p className="text-gray-300 text-sm whitespace-pre-line">
+                {contactInfo.address}
               </p>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-orange-500" />
-                <span className="text-gray-300 text-sm">+088 (246) 642-27-10</span>
+                <span className="text-gray-300 text-sm">{contactInfo.phone}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-orange-500" />
-                <span className="text-gray-300 text-sm">example@gmail.com</span>
+                <span className="text-gray-300 text-sm">{contactInfo.email}</span>
               </div>
             </div>
           </div>
@@ -64,25 +81,24 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Follow Us</h4>
             <nav className="flex flex-col space-y-2">
-              <Link href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
-                Instagram
-              </Link>
-              <Link href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
-                Twitter
-              </Link>
-              <Link href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
-                LinkedIn
-              </Link>
-              <Link href="#" className="text-gray-300 hover:text-white transition-colors text-sm">
-                Facebook
-              </Link>
+              {socialLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-300 hover:text-white transition-colors text-sm"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </nav>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-600 mt-8 pt-6">
-          <p className="text-center text-gray-400 text-sm">Copyright © 2025 Travel Agency</p>
+        <div className="border-t border-gray-600 mt-8 pt-4">
+          <p className="text-center text-gray-400 text-sm">
+            Copyright © 2025 Travel Agency
+          </p>
         </div>
       </div>
 
